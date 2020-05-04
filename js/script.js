@@ -19,7 +19,7 @@ var index;
 var titles = ["American Pepperoni", "Classic Italiano", "Veggie Supreme", "Royal Canadian", "Smokey Bacon", "The Loaded"];
 var descs = ["The traditional American double pepperoni loaded with pizza mozzarella, homemade sauce and of course lots of love!",
     "The classic Italian margherita with traditional tomato sauce, mozzarella and Italian herbs.",
-    "Pizza loaded with tomato, onion, corn, olives and lots of cheese. Who doesn't love vieggies and cheese?",
+    "Pizza loaded with tomato, onion, corn, olives and lots of cheese. Who doesn't love veggies and cheese?",
     "We Canadians love meat eh! Royal Canadian pizza is loaded with Pepperoni, bacon crumble and 100% Canadian mozza cheese.",
     "Bacon is ❤️! This smokey and delicious is has loads of bacon and cheese.",
     "You know how we load our pizza right? This loaded treat is our speciality. You only get it here at Pitzeria!"
