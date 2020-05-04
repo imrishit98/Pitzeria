@@ -1,0 +1,180 @@
+/**
+ * @ Author: Rishit Patel
+ * @ Create Time: May 03, 2020 14:59:58
+ * @ Description: pitzeria
+ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import "_mixins";
+// colors
+$primary-color: #E5342A;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    width: 100vw;
+    font-size: 24px;
+    align-items: center;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.11);
+    overflow: hidden;
+    color: $primary-color;
+
+    #menuIcon {
+        margin-left: 25px;
+    }
+
+    #foodTray {
+        margin-right: 25px;
+    }
+
+    #logo {
+        height: 50%;
+    }
+}
+
+.mainArea {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fadeInLeft 1.1s;
+
+    #pizzaTitle {
+        font-size: 4.7em;
+        text-align: center;
+        //animation: fadeInLeft 1.1s;
+    }
+
+    #pizzaDesc {
+        text-align: center;
+        font-size: 1.1em;
+        max-width: 70%;
+    }
+
+    .pizzaPrice {
+        font-weight: bold;
+        font-size: 1.8em;
+    }
+
+    .animateLeft {
+        animation: fadeInLeft 1.1s;
+    }
+
+    .sizeArea {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+        font-size: 17px;
+        margin-top: 11px;
+
+        #size {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            font-size: 17px;
+        }
+    }
+
+    .orderNow {
+        @include dbtn;
+        background-color: $primary-color;
+        color: white;
+        margin-top: 11px;
+    }
+
+    @keyframes fadeInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-500px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+}
+
+
+
+.right {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    #pizzaImg {
+        width: 70%;
+    }
+
+    .animateRight {
+        animation: fadeInRight 1.1s;
+    }
+
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(500px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 56px;
+    width: 100vw;
+    font-size: 1.1em;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.11);
+    overflow: hidden;
+    cursor: pointer;
+
+    .fBox {
+        height: 100%;
+        width: 16.6666666667%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .active {
+        border-bottom: 7px solid $primary-color;
+        transition-duration: 0.25s;
+        transition-timing-function: ease;
+    }
+}

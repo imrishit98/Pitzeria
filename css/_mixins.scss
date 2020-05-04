@@ -1,0 +1,19 @@
+@mixin maxw($wVal) {
+    @media (max-width: ($wVal)) {
+        @content;
+    }
+}
+
+@mixin minw($wVal) {
+    @media (min-width: ($wVal)) {
+        @content;
+    }
+}
+
+@mixin dbtn {
+    border: none;
+    border-radius: 11rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.41em 1.7em;
+}

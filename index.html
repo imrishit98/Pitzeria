@@ -1,0 +1,60 @@
+<!--
+ * @ Author: Rishit Patel
+ * @ Create Time: May 03, 2020 14:56:59
+ * @ Description: pitzeria
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitzeria</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="iconify" data-icon="ri:menu-2-fill" data-inline="false" id="menuIcon"></span>
+        <img src="./img/pitzeria logo.svg" alt="Pitzeria Logo" id="logo">
+        <span class="iconify" data-icon="whh:foodtray" data-inline="false" id="foodTray"></span>
+    </nav>
+    <div class="mainArea">
+        <div class="left">
+            <div id="pizzaTitle">Veggie Supreme</div>
+            <div id="pizzaDesc">Pizza loaded with tomato, onion, corn, olives and lots of cheese. Who doesn't love
+                vieggies and cheese?</div>
+            <div class="sizeArea">
+                <div class="pizzaPrice">$<span id="pizzaPrice">12.99</span></div>
+                <div class="sizeDiv">Size
+                    <select name="size" id="size">
+                        <option value="S">S</option>
+                        <option value="M" selected="selected">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+            </div>
+            <button class="orderNow" id="order">
+                Order Now
+            </button>
+        </div>
+        <div class="right">
+            <img src="./img/veggie-lover-pizza.jpg" alt="Veggie Lover Pizza" id="pizzaImg">
+        </div>
+    </div>
+    <div id="footer">
+        <div class="fBox" id="fBox1">Pepperoni</div>
+        <div class="fBox" id="fBox2">Italiano</div>
+        <div class="fBox active" id="fBox3">Veggie</div>
+        <div class="fBox" id="fBox4">Canadian</div>
+        <div class="fBox" id="fBox5">Bacon</div>
+        <div class="fBox" id="fBox6">Loaded</div>
+    </div>
+    <!-- scripts -->
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

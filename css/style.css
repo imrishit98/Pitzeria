@@ -1,0 +1,260 @@
+/**
+ * @ Author: Rishit Patel
+ * @ Create Time: May 03, 2020 14:59:58
+ * @ Description: pitzeria
+ */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 56px;
+  width: 100vw;
+  font-size: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.11);
+  overflow: hidden;
+  color: #E5342A;
+}
+
+.navbar #menuIcon {
+  margin-left: 25px;
+}
+
+.navbar #foodTray {
+  margin-right: 25px;
+}
+
+.navbar #logo {
+  height: 50%;
+}
+
+.mainArea {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: fadeInLeft 1.1s;
+          animation: fadeInLeft 1.1s;
+}
+
+.left #pizzaTitle {
+  font-size: 4.7em;
+  text-align: center;
+}
+
+.left #pizzaDesc {
+  text-align: center;
+  font-size: 1.1em;
+  max-width: 70%;
+}
+
+.left .pizzaPrice {
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+.left .animateLeft {
+  -webkit-animation: fadeInLeft 1.1s;
+          animation: fadeInLeft 1.1s;
+}
+
+.left .sizeArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+  font-size: 17px;
+  margin-top: 11px;
+}
+
+.left .sizeArea #size {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+}
+
+.left .orderNow {
+  border: none;
+  border-radius: 11rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.41em 1.7em;
+  background-color: #E5342A;
+  color: white;
+  margin-top: 11px;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.right {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.right #pizzaImg {
+  width: 70%;
+}
+
+.right .animateRight {
+  -webkit-animation: fadeInRight 1.1s;
+          animation: fadeInRight 1.1s;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 56px;
+  width: 100vw;
+  font-size: 1.1em;
+  -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.11);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#footer .fBox {
+  height: 100%;
+  width: 16.6666666667%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer .active {
+  border-bottom: 7px solid #E5342A;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+/*# sourceMappingURL=style.css.map */
