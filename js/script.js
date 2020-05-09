@@ -12,10 +12,11 @@ const pTitle = document.getElementById("pizzaTitle");
 const pDesc = document.getElementById("pizzaDesc");
 const pPrice = document.getElementById("pizzaPrice");
 const pImg = document.getElementById("pizzaImg");
-
+const pSize = document.getElementById("size");
+const pOrder = document.getElementById("order");
 
 var choice = [].slice.call(footer.querySelectorAll(".fBox"), 0); // getting all childs inside #footer, and adding them to array
-var index;
+var index = 2;
 var titles = ["American Pepperoni", "Classic Italiano", "Veggie Supreme", "Royal Canadian", "Smokey Bacon", "The Loaded"];
 var descs = ["The traditional American double pepperoni loaded with pizza mozzarella, homemade sauce and of course lots of love!",
     "The classic Italian margherita with traditional tomato sauce, mozzarella and Italian herbs.",
@@ -24,7 +25,7 @@ var descs = ["The traditional American double pepperoni loaded with pizza mozzar
     "Bacon is ❤️! This smokey and delicious is has loads of bacon and cheese.",
     "You know how we load our pizza right? This loaded treat is our speciality. You only get it here at Pitzeria!"
 ];
-var prices = [10.99, 13.99, 12.99, 16.99, 14.99, 15.99];
+var prices = [7.99, 9.49, 8.99, 12.49, 11.99, 12.99];
 var imgs = ["./img/american-pepperoni-pizza.jpg",
     "./img/italiano-pizza.jpg",
     "./img/veggie-lover-pizza.jpg",
@@ -42,8 +43,11 @@ footer.addEventListener("click", function (e) {
     // changing text
     pTitle.innerHTML = titles[index];
     pDesc.innerHTML = descs[index];
-    pPrice.innerHTML = prices[index];
     pImg.src = imgs[index];
+    pSize.selectedIndex = 0;
+    pPrice.innerHTML = prices[index];
+    pOrder.style.marginRight = "61px";
+
     // removing the class
     pTitle.classList.remove("animateLeft");
     pDesc.classList.remove("animateLeft");
@@ -55,7 +59,12 @@ footer.addEventListener("click", function (e) {
     pTitle.classList.add("animateLeft");
     pDesc.classList.add("animateLeft");
     pImg.classList.add("animateRight");
+
 }, false);
+
+function theSize(selTag) {
+    pPrice.innerHTML = (prices[index] + selTag.selectedIndex * 2).toFixed(2);
+}
 
 function toggleItem(elem) {
     for (var i = 0; i < elem.length; i++) {

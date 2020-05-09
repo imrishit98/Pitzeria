@@ -8,6 +8,9 @@
 // colors
 $primary-color: #E5342A;
 
+//variables
+$d-height: 56px;
+
 * {
     padding: 0;
     margin: 0;
@@ -19,13 +22,18 @@ body {
     background-color: white;
 }
 
+.rContainer {
+    height: 100vh;
+    display: flex;
+}
+
 .navbar {
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
-    height: 56px;
+    height: $d-height;
     width: 100vw;
     font-size: 24px;
     align-items: center;
@@ -47,11 +55,22 @@ body {
 }
 
 .mainArea {
-    height: 100vh;
+    height: calc(100vh - #{$d-height * 2});
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
+    overflow: hidden;
+
+    @include maxw(992px) {
+        padding: 0 2%;
+    }
+
+    @include maxw(768px) {
+        flex-direction: column-reverse;
+    }
+
 }
 
 .left {
@@ -65,7 +84,6 @@ body {
     #pizzaTitle {
         font-size: 4.7em;
         text-align: center;
-        //animation: fadeInLeft 1.1s;
     }
 
     #pizzaDesc {
@@ -90,6 +108,10 @@ body {
         width: 30%;
         font-size: 17px;
         margin-top: 11px;
+
+        @include maxw(1140px) {
+            width: 42%;
+        }
 
         #size {
             font-family: 'DM Sans', sans-serif;
@@ -119,6 +141,56 @@ body {
             transform: translateX(0px);
         }
     }
+
+    @include maxw(992px) {
+        #pizzaTitle {
+            font-size: 3.1em;
+            line-height: 1em;
+            margin-bottom: 6px;
+        }
+
+        #pizzaDesc {
+            font-size: 0.9em;
+            max-width: 86%;
+        }
+
+        .pizzaPrice {
+            font-size: 1.1em;
+        }
+
+        .sizeArea {
+            font-size: 1.1em;
+            width: 41%;
+
+            #size {
+                font-size: 1.1em;
+            }
+        }
+
+        .orderNow {
+            font-size: 1.1em;
+        }
+    }
+
+    @include maxw(768px) {
+        flex: 40%;
+        justify-content: start;
+        align-items: center;
+        padding-top: 21px;
+
+        .sizeArea {
+            font-size: 1em;
+            width: 30%;
+
+            #size {
+                font-size: 1em;
+            }
+        }
+
+        .orderNow {
+            align-self: center;
+        }
+    }
 }
 
 
@@ -128,9 +200,12 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    animation: fadeInRight 1.1s;
 
     #pizzaImg {
-        width: 70%;
+        max-height: 70%;
+        max-width: 70%;
+
     }
 
     .animateRight {
@@ -148,6 +223,25 @@ body {
             transform: translateX(0px);
         }
     }
+
+    @include maxw(992px) {
+        #pizzaImg {
+            max-height: 96%;
+            width: auto;
+        }
+
+    }
+
+    @include maxw(768px) {
+        flex: 60%;
+
+        #pizzaImg {
+            height: 100%;
+            max-width: 100%;
+            align-self: flex-end;
+        }
+
+    }
 }
 
 #footer {
@@ -157,7 +251,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 56px;
+    height: $d-height;
     width: 100vw;
     font-size: 1.1em;
     box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.11);
@@ -177,6 +271,24 @@ body {
         transition-duration: 0.25s;
         transition-timing-function: ease;
     }
+
+    @include maxw(992px) {
+        font-size: 1em;
+        height: 47px;
+
+        .active {
+            border-bottom: 4px solid $primary-color;
+        }
+    }
+
+    @include maxw(500px) {
+        font-size: 3vw;
+        height: 47px;
+
+        .active {
+            border-bottom: 4px solid $primary-color;
+        }
+    }
 }
 
 //tempoprary
@@ -194,11 +306,5 @@ body {
         background-color: $primary-color;
         color: white;
         text-align: center;
-    }
-}
-
-@include maxw(500px) {
-    .mainArea {
-        display: none;
     }
 }
